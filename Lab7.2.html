@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function calculate(){
+                var textInput1 = document.getElementById("num1");
+                var Num1 = textInput1.value;
+                var textInput2 = document.getElementById("num2");
+                var Num2 = textInput2.value;
+                var sum;
+
+                if (document.getElementById("operator").value == "add"){
+                    var sum = parseInt(Num1) + parseInt(Num2);
+                }
+                else if (document.getElementById("operator").value == "minus"){
+                    var sum = parseInt(Num1) - parseInt(Num2);
+                }
+                else if (document.getElementById("operator").value == "multipiled"){
+                    var sum = parseInt(Num1) * parseInt(Num2);
+                }
+                else if (document.getElementById("operator").value == "divied"){
+                    var sum = parseInt(Num1) / parseInt(Num2);
+                }
+                var textInput3 = document.getElementById("Sum");
+                textInput3.value = sum;          
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <form>
+            <input type="text" id="num1"> 
+            <select id="operator">
+                <option value="add">+</option>
+                <option value="minus">-</option>
+                <option value="multipiled">*</option>
+                <option value="divied">/</option>
+            </select>
+            <input type="text" id="num2"> 
+            = <input type="text" id="Sum">
+            <input type="button" value="Go Go" onclick="calculate()">
+            
+
+        </form>
+    </body>
+</html>
